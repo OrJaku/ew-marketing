@@ -1,0 +1,51 @@
+:root{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  --bg-color: #F5E9FF;
+  --nav-color: #2F2E41;
+  --page-max-width: 1430px;
+  background-color: var(--bg-color);
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: block;
+
+}
+
+
+* {
+  line-height: 1.5;
+
+  color-scheme: light dark;
+
+  box-sizing:  border-box;
+  padding: 0;
+}
+
+body{
+  margin: 0px;
+}
+
+header {
+  margin-right: -30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-weight: 500;
+  color: #b4b4b4;
+  text-decoration: inherit;
+}
+
+.banner-text {
+  color: rgb(41, 41, 41);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+  text-shadow: 0px 4px 4px #00000040;
+}
+
+
+

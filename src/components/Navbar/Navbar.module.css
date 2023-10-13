@@ -1,0 +1,27 @@
+
+
+.navbar {
+    max-width: var(--page-max-width);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--nav-color);
+    margin-right: 0px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+
+.menu li {
+    padding: 1rem;
+}
+
+.menu a {
+    font-size: 12px;
+    
+}

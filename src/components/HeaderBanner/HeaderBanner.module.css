@@ -1,0 +1,9 @@
+.banner {
+    max-width: var(--page-max-width);
+    height: 200px;
+}
+
+.htext {
+    padding-top: 50px;
+    text-align: center;
+}

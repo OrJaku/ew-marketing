@@ -1,0 +1,18 @@
+.banner {
+    max-width: var(--page-max-width);
+    height: 238px;
+}
+
+.peopleimg {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: -100px;
+    top: -238px;
+    opacity: 0.8;
+}
+
+.htext {
+    padding-left: 60px;
+    padding-top: 100px;
+}

@@ -1,0 +1,9 @@
+.content {
+    height: 160px;
+    max-width: var(--page-max-width);
+}
+
+.htext {
+    padding-top: 60px;
+    text-align: center;
+}

@@ -6,7 +6,7 @@ import imagePeople from '../../assets/middleImage.svg'
 
 const MiddleBanner = () => {
     return (
-        <>
+        <div className={styles.container}>
             <div
                 style={{ backgroundImage: `url(${middleBanner})` }}
                 className={styles.banner}>
@@ -19,7 +19,7 @@ const MiddleBanner = () => {
             <img
                 className={styles.peopleimg}
                 src={imagePeople} alt="img" />
-        </>
+        </div>
     )
 }
 

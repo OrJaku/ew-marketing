@@ -11,7 +11,13 @@ const Navbar = () => {
             <nav>
                 <ul className={styles.menu}>
                     <li>
-                        <a href='/'>Marketing</a>
+                        <a href='/'>Start</a>
+                    </li>
+                    <li>
+                        <a href='/'>Potrzeby</a>
+                    </li>
+                    <li>
+                        <a href='/'>Porozmawiajmy</a>
                     </li>
                     <li>
                         <a href='/'>O mnie</a>

@@ -1,8 +1,12 @@
 .banner {
     max-width: var(--page-max-width);
-    height: 200px;
+    height: 580px;
 }
 
-.headertext {
-
+.contactimg {
+    position: relative;
+    float: right;
+    margin-right: 0px;
+    margin-top: -638px;
+    opacity: 0.8;
 }

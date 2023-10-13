@@ -1,14 +1,17 @@
+.container {
+    position: relative;
+}
+
 .banner {
     max-width: var(--page-max-width);
     height: 238px;
 }
 
 .peopleimg {
-    position: relative;
-    float: right;
+    position: absolute;
     margin-right: 10px;
-    margin-top: -100px;
-    top: -238px;
+    top: -100px;
+    left: 70%;
     opacity: 0.8;
 }
 
@@ -16,3 +19,7 @@
     padding-left: 60px;
     padding-top: 100px;
 }
+
+/* @media screen and (max-width: 720px) {
+    
+} */

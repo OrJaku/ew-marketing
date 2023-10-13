@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar/Navbar"
 import HeaderBanner from "./components/HeaderBanner/HeaderBanner"
 import MiddleBanner from "./components/MiddleBanner/MiddleBanner"
 import BottomBanner from "./components/BottomBanner/BottomBanner"
+import HeaderContent from "./components/HeaderContent/HeaderContent"
+import MiddleContent from "./components/MiddleContent/MiddleContent"
 
 function App() {
 
@@ -11,9 +13,9 @@ function App() {
     <div>
       <Navbar />
       <HeaderBanner />
-      <div style={{height: 300}}></div>
+      <HeaderContent />
       <MiddleBanner />
-      <div style={{height: 150}}></div>
+      <MiddleContent />
       <BottomBanner />
     </div>
   )

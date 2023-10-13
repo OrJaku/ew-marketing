@@ -6,6 +6,7 @@ import MiddleBanner from "./components/MiddleBanner/MiddleBanner"
 import BottomBanner from "./components/BottomBanner/BottomBanner"
 import HeaderContent from "./components/HeaderContent/HeaderContent"
 import MiddleContent from "./components/MiddleContent/MiddleContent"
+import Footer from "./components/Footer/Footer"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <MiddleBanner />
       <MiddleContent />
       <BottomBanner />
+      <Footer />
     </div>
   )
 }

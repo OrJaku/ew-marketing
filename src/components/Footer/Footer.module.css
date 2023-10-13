@@ -1,0 +1,27 @@
+.footer {
+    height: 100px;
+    max-width: var(--page-max-width);
+    background-color: var(--nav-color);
+
+}
+
+.content {
+    max-width: var(--page-max-width);
+    display: flex;
+    font-size: 12px;
+}
+
+.content > div{
+    flex: 1 0 auto;
+    margin-top: 8px;
+}
+
+.contact {
+    display: inline-block;
+    text-align: left;
+}
+
+.htext {
+    padding-top: 60px;
+    text-align: center;
+}

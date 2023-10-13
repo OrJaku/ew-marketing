@@ -40,11 +40,11 @@ a {
 }
 
 .banner-text {
-  color: rgb(41, 41, 41);
+  color: var(--nav-color);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 24px;
-  text-shadow: 0px 4px 4px #00000040;
+  text-shadow: 1px 1px 10px #00000040;
 }
 
 

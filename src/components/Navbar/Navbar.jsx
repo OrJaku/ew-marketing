@@ -4,7 +4,7 @@ import styles from './Navbar.module.css'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import Logo from '../../assets/logo.svg'
 
-const Navbar = () => {
+const Navbar = ({ middleBannerRef, bottomBannerRef }) => {
     return (
         <header className={styles.navbar}>
             <img src={Logo} alt="EO" />
@@ -14,10 +14,24 @@ const Navbar = () => {
                         <a href='/'>Start</a>
                     </li>
                     <li>
-                        <a href='/'>Potrzeby</a>
+                        <a
+                            onClick={() => middleBannerRef.current.scrollIntoView({
+                                behavior: "smooth",
+                                block: "nearest",
+                                inline: "start"
+                            })}>
+                            Potrzeby
+                        </a>
                     </li>
                     <li>
-                        <a href='/'>Porozmawiajmy</a>
+                        <a
+                            onClick={() => bottomBannerRef.current.scrollIntoView({
+                                behavior: "smooth",
+                                block: "nearest",
+                                inline: "start"
+                            })}>
+                            Porozmawiajmy
+                        </a>
                     </li>
                     <li>
                         <a href='/'>O mnie</a>

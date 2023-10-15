@@ -4,10 +4,11 @@ import styles from './BottomBanner.module.css'
 import bottomBanner from '../../assets/bottomBanner.png'
 import bottomImage from '../../assets/bottomImage.svg'
 
-const BottomBanner = () => {
+const BottomBanner = ({ bottomBannerRef }) => {
     return (
         <div>
             <div
+                ref={bottomBannerRef}
                 style={{ backgroundImage: `url(${bottomBanner})` }}
                 className={styles.banner}>
                 <div

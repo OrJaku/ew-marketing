@@ -1,5 +1,5 @@
 
-import React from "react"
+import React, { useRef } from "react"
 import Navbar from "./components/Navbar/Navbar"
 import HeaderBanner from "./components/HeaderBanner/HeaderBanner"
 import MiddleBanner from "./components/MiddleBanner/MiddleBanner"
@@ -9,15 +9,22 @@ import MiddleContent from "./components/MiddleContent/MiddleContent"
 import Footer from "./components/Footer/Footer"
 
 function App() {
+  const middleBannerRef = useRef(null)
+  const bottomBannerRef = useRef(null)
+
 
   return (
     <div>
-      <Navbar />
+      <Navbar
+        middleBannerRef={middleBannerRef}
+        bottomBannerRef={bottomBannerRef} />
       <HeaderBanner />
       <HeaderContent />
-      <MiddleBanner />
+      <MiddleBanner
+        middleBannerRef={middleBannerRef} />
       <MiddleContent />
-      <BottomBanner />
+      <BottomBanner
+        bottomBannerRef={bottomBannerRef} />
       <Footer />
     </div>
   )

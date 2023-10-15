@@ -4,10 +4,11 @@ import styles from './MiddleBanner.module.css'
 import middleBanner from '../../assets/middleBanner.png'
 import imagePeople from '../../assets/middleImage.svg'
 
-const MiddleBanner = () => {
+const MiddleBanner = ({ middleBannerRef }) => {
     return (
         <div className={styles.container}>
             <div
+                ref={middleBannerRef}
                 style={{ backgroundImage: `url(${middleBanner})` }}
                 className={styles.banner}>
                 <div

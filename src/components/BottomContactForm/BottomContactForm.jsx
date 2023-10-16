@@ -13,15 +13,15 @@ const BottomContactForm = ({ }) => {
                 </div>
                 <form>
                     <div className={styles.text}>
-                        <label for='name'>Imię i nazwisko*</label>
+                        <label htmlFor='name'>Imię i nazwisko*</label>
                         <input id='name' type='text' placeholder='Jan Kowlaski' />
                     </div>
                     <div className={styles.text}>
-                        <label for='phone-number'>Telefon*</label>
+                        <label htmlFor='phone-number'>Telefon*</label>
                         <input id='phone-number' type='tel' pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder='600 300 100' />
                     </div>
                     <div className={styles.text}>
-                        <label for='message'>Wiadomość (opcjonalnie)</label>
+                        <label htmlFor='message'>Wiadomość (opcjonalnie)</label>
                         <textarea id='message' placeholder='Napisz kilka zdań o twojej firmie, stronie czy reklamach..' />
                     </div>
                     <button

@@ -1,8 +1,19 @@
 .content {
-    height: 400px;
+    max-width: var(--page-max-width);
+    padding-bottom: 75px;
 }
 
 .htext {
-    padding-left: 60px;
-    padding-top: 100px;
+    padding-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }

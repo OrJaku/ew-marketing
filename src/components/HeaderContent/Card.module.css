@@ -1,0 +1,31 @@
+.card {
+    max-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--nav-color);
+    height: 330px;
+
+}
+
+
+.image {
+    text-align: center;
+}
+
+
+.title,
+.subtitle {
+    text-align: center;
+    padding: 1px 10px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    top: 0%;
+}
+
+.subtitle {
+    font-size: 14px;
+
+}

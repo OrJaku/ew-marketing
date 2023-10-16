@@ -1,0 +1,59 @@
+
+:root{
+    --form-input-width: 400px;
+}
+
+form {
+    justify-content: center;
+    margin: auto;
+    padding-left: 100px;
+    padding-top: 120px;
+    margin: auto;
+    position: absolute;
+}
+
+form>div {
+    margin-bottom: 10px;
+
+}
+
+form>div>div {
+    display: block;
+
+}
+
+label {
+    display: block;
+    color: rgb(220, 240, 246);
+    font-size: 11px;
+    font-weight: 400;
+    margin-bottom: 2px;
+    /* text-shadow: 2px 2px 0px #ababab84; */
+}
+
+
+.htext {
+    position: absolute;
+
+    padding-left: 60px;
+    padding-top: 50px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 400px;
+}
+
+
+@media screen and (max-width: 950px) {
+    form {
+        right: unset;
+        padding-left: 40px;
+
+    }
+}

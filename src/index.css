@@ -80,6 +80,15 @@ ul {
   list-style-type: none;
 }
 
+li a {
+  cursor: pointer;
+}
+
+li a:hover {
+  opacity: 0.8;
+}
+
+
 a {
   font-weight: 500;
   color: var(--white-font-color);

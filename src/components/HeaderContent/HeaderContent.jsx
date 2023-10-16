@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './HeaderContent.module.css'
 import Card from './Card'
 
-const HeaderContent = () => {
+const HeaderContent = ({ headerContentRef }) => {
     const cardList = {
         reklamy: {
             image: "reklamy",
@@ -28,6 +28,7 @@ const HeaderContent = () => {
 
     return (
         <div
+            ref={headerContentRef}
             className={styles.content}>
             <div
                 className={`banner-text ${styles.htext}`}>

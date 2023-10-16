@@ -9,6 +9,7 @@ import MiddleContent from "./components/MiddleContent/MiddleContent"
 import Footer from "./components/Footer/Footer"
 
 function App() {
+  const headerContentRef = useRef(null)
   const middleBannerRef = useRef(null)
   const bottomBannerRef = useRef(null)
 
@@ -16,10 +17,12 @@ function App() {
   return (
     <div>
       <Navbar
+        headerContentRef={headerContentRef}
         middleBannerRef={middleBannerRef}
         bottomBannerRef={bottomBannerRef} />
       <HeaderBanner />
-      <HeaderContent />
+      <HeaderContent 
+        headerContentRef={headerContentRef}/>
       <MiddleBanner
         middleBannerRef={middleBannerRef} />
       <MiddleContent />

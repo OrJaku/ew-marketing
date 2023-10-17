@@ -8,6 +8,7 @@ const MiddleBanner = ({ middleBannerRef }) => {
     return (
         <div className={styles.container}>
             <div
+                
                 ref={middleBannerRef}
                 style={{ backgroundImage: `url(${middleBanner})` }}
                 className={styles.banner}>

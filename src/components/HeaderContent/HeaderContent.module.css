@@ -17,26 +17,30 @@
     align-items: center;
     position: relative;
     width: var(--page-max-width);
+
 }
 
 
 @media screen and (max-width: 1440px) {
     .cards {
-       overflow-x: scroll;
-       overflow-y: hidden;
-       justify-content: unset;
-       width: 740px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        justify-content: unset;
+        width: 740px;
 
     }
 
 }
 
 @media screen and (max-width: 740px) {
-     .cards {
+    .cards {
         overflow-x: scroll;
         overflow-y: hidden;
         justify-content: unset;
         width: 400px;
+    }
 
-     }
+    .htext {
+        margin-left: 50px;
+    }
 }

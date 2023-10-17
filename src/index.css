@@ -1,4 +1,4 @@
-:root{
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: rgba(255, 255, 255, 0.87);
   --bg-color: #F5E9FF;
@@ -16,11 +16,11 @@
   line-height: 1.5;
 
 
-  box-sizing:  border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 
-body{
+body {
   margin: 0px;
   margin-bottom: 10px;
 }
@@ -32,7 +32,6 @@ header {
 input {
   padding: 9px;
   text-align: center;
-  min-width: 400px;
   border: unset;
   border-radius: 4px;
 }
@@ -46,7 +45,6 @@ input::placeholder {
 textarea {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   padding: 10px;
-  min-width: 400px;
   min-height: 200px;
   border: unset;
   border-radius: 4px;
@@ -104,4 +102,8 @@ a {
 }
 
 
-
+@media screen and (max-width: 740px) {
+  .banner-text {
+    font-size: 20px;
+  }
+}

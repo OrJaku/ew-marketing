@@ -11,9 +11,8 @@
 
 
 .menu {
-    display: flex;    
+    display: flex;
 }
-
 
 .menu li {
     padding: 1rem;
@@ -21,7 +20,7 @@
 
 .menu a {
     font-size: 12px;
-    
+
 }
 
 .menu_btn {
@@ -34,9 +33,9 @@
         display: block;
         height: fit-content;
         align-items: unset;
-        transition: left 1s;
-
+        transition: top 1s;
     }
+
 
     .menu {
         display: flex;
@@ -46,17 +45,38 @@
         height: fit-content;
         padding-top: 0px;
         background-color: var(--nav-color);
+        animation: showMobileMenu 0.2s 1 linear both;
+
     }
+
+    .show_menu {
+        animation: showMobileMenu 0.2s 1 linear both;
+
+    }
+
+    @keyframes showMobileMenu {
+        0% {
+            background-color: unset;
+            margin-top: -200px;
+        }
+
+        100% {
+            margin-top: -20px;
+            background-color: unset;
+        }
+    }
+
 
     .menu a {
         font-size: 18px;
         font-weight: 500;
     }
 
-    .upper_bar{
+    .upper_bar {
         display: flex;
         justify-content: space-between;
 
+
     }
-    
+
 }

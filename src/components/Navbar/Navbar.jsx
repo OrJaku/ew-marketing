@@ -29,14 +29,14 @@ const Navbar = ({ isMobile, middleBannerRef, bottomBannerRef, headerContentRef }
             </div>
             {!isMobile || isMobile && mobileMenuOpen
                 ? <nav>
-                    <ul className={styles.menu}>
+                    <ul className={mobileMenuOpen? [styles.menu, styles.show_menu].join(' '): [styles.menu, styles.hide_menu].join(' ')}>
                         <li>
                             <a
                                 onClick={() => headerContentRef.current.scrollIntoView({
                                     behavior: "smooth",
                                     inline: "start"
                                 })}>
-                                Co robie
+                                Co robię
                             </a>
                         </li>
                         <li>

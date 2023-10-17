@@ -35,6 +35,7 @@ function App() {
   return (
     <div>
       <Navbar
+        isMobile={isMobile}
         headerContentRef={headerContentRef}
         middleBannerRef={middleBannerRef}
         bottomBannerRef={bottomBannerRef} />

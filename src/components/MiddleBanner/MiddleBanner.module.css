@@ -12,7 +12,7 @@
     margin-right: 10px;
     top: -100px;
     left: 70%;
-    opacity: 0.6;
+    opacity: 0.45;
 }
 
 .htext {
@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 720px) {
     .peopleimg {
-        left: 5%;
+        left: -5%;
     }
 
     .htext {
@@ -37,4 +37,10 @@
 
     }
 
+}
+
+@media screen and (max-width: 400px) {
+    .peopleimg {
+        left: -30%;
+    }
 }

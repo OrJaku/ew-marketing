@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './HeaderContent.module.css'
 import Card from './Card'
 
-const HeaderContent = ({ headerContentRef }) => {
+const HeaderContent = ({ headerContentRef, isMobile }) => {
     const cardList = {
         reklamy: {
             image: "reklamy",
@@ -41,7 +41,8 @@ const HeaderContent = ({ headerContentRef }) => {
                         imageName={item.image}
                         altText={item.image}
                         titleText={item.title}
-                        subtitleText={item.subtitle} />
+                        subtitleText={item.subtitle}
+                        isMobile={isMobile} />
                 ))}
             </div>
         </div>

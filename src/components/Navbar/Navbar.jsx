@@ -43,8 +43,10 @@ const Navbar = ({ middleBannerRef, bottomBannerRef, headerContentRef }) => {
                     <li>
                         <a href='/'>O mnie</a>
                     </li>
-                    {/* <AiOutlineMenu /> */}
                 </ul>
+                <div className={styles.menu}>
+                    <AiOutlineMenu />
+                </div>
             </nav>
         </header>
     )

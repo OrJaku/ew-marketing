@@ -1,35 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import styles from './Card.module.css'
+import { baseDimensions } from '../../utils/settings.js'
 
 
-
-const Card = ({ imageName, titleText, subtitleText, altText }) => {
-    const primaryImgSize = 255
-    const mobileImgSize = 220
-    const mobilPageWidthPx = 740
-
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= mobilPageWidthPx ? true : false)
-
-    useEffect(() => {
-        function handleWindowResize() {
-            if (window.innerWidth <= mobilPageWidthPx) {
-                setIsMobile(true)
-            } else {
-                setIsMobile(false)
-            }
-        }
-        window.addEventListener('resize', handleWindowResize);
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
-
+const Card = ({ imageName, titleText, subtitleText, altText, isMobile }) => {
 
     return (
         <div className={styles.card}>
             <div className={styles.image}>
-                <img width={isMobile ? mobileImgSize : primaryImgSize}
-                    height={isMobile ? mobileImgSize : primaryImgSize}
+                <img width={isMobile ? baseDimensions.mobileImgSize : baseDimensions.primaryImgSize}
+                    height={isMobile ? baseDimensions.mobileImgSize : baseDimensions.primaryImgSize}
                     src={`card-${imageName}.png`}
                     alt={altText} />
             </div>

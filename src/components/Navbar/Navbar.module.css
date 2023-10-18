@@ -6,6 +6,7 @@
     align-items: center;
     background-color: var(--nav-color);
     margin-right: 0px;
+    z-index: 15;
 }
 
 
@@ -31,41 +32,34 @@
 @media screen and (max-width: 740px) {
     .navbar {
         display: block;
-        height: fit-content;
-        align-items: unset;
-        transition: top 1s;
+        margin-bottom: 0px
     }
 
+    .navbar_active {
+        margin-bottom: 250px
+    }
 
     .menu {
+        margin-top: 0px;
         display: flex;
         flex-direction: column;
-        margin-top: -20px;
+        position: relative;
         text-align: center;
-        height: fit-content;
+        bottom: 0;
+        left: 0;
+        right: 0;
         padding-top: 0px;
         background-color: var(--nav-color);
-        animation: showMobileMenu 0.2s 1 linear both;
-
+        transition: top 0.2s;
     }
 
-    .show_menu {
-        animation: showMobileMenu 0.2s 1 linear both;
-
+    .menu_inactive {
+        top: -300px;
     }
 
-    @keyframes showMobileMenu {
-        0% {
-            background-color: unset;
-            margin-top: -200px;
-        }
-
-        100% {
-            margin-top: -20px;
-            background-color: unset;
-        }
+    .menu_active {
+        top: 0
     }
-
 
     .menu a {
         font-size: 18px;
@@ -78,5 +72,4 @@
 
 
     }
-
 }

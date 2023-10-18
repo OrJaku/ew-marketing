@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 import styles from './BottomContactForm.module.css'
+import Modal from 'react-modal';
+
+import { sendFormData } from '../../utils/services.js'
+import { AiOutlineClose } from 'react-icons/ai'
 
 
 
 const BottomContactForm = ({ }) => {
+    // Forms
     const [name, setName] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
-
     const [message, setMessage] = useState("")
+
+    const [submitModalOpen, setSubmitModalOpen] = useState(false)
+    const [submitResponseState, setSubmitResponseState] = useState(false)
 
     const phoneNumberFormatter = (inputValue) => {
         const number = inputValue.trim().replace(/[^0-9]/g, "");
@@ -22,6 +29,29 @@ const BottomContactForm = ({ }) => {
         setPhoneNumber(number)
     }
 
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const formBody = {
+            name: name,
+            phone_number: Number(phoneNumber.split("-").join('')),
+            message: message
+        }
+        const resp = await sendFormData("http://130.61.148.113:8898/submit", formBody, setSubmitResponseState)
+        try {
+            if ("message" in resp) {
+                setSubmitResponseState(true)
+                setName("")
+                setPhoneNumber("")
+                setMessage("")
+            } else {
+                console.log("Incorrect server response", resp)
+            }
+        } catch {
+            console.log("Error Catch: Incorrect server response", resp)
+        }
+        setSubmitModalOpen(true)
+    }
+
     return (
         <div>
             <div
@@ -30,7 +60,7 @@ const BottomContactForm = ({ }) => {
                     className={`banner-text ${styles.htext}`}>
                     // Porozmawiajmy!
                 </div>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={styles.text}>
                         <label htmlFor='name'>Imię*</label>
                         <input
@@ -66,6 +96,37 @@ const BottomContactForm = ({ }) => {
                     </button>
                 </form>
             </div>
+            <Modal
+                ariaHideApp={false}
+                isOpen={submitModalOpen}
+                onRequestClose={() => setSubmitModalOpen(false)}
+            >
+                <div style={{float: 'right'}}>
+                    {<AiOutlineClose
+                        onClick={() => setSubmitModalOpen(false)}
+                        size={25}
+                        color={'black'} />}
+                </div>
+                <div className={styles.modal_content}>
+                    <div className={styles.modal_content_title}>
+                        {submitResponseState
+                            ? "Dziękuję za uzupełnienie formularza"
+                            : "Coś poszło nie tak :("}
+                    </div>
+                    <img
+                        style={{
+                            margin: '30px 10px'
+                        }}
+                        width={70}
+                        src={`check-${submitResponseState ? "ok" : "failed"}.png`}
+                        alt="OK" />
+                    <div>
+                        {submitResponseState
+                            ? "Odezwię się na podane dane kontaktowe w najszybciej jak to będzie możliwe :)"
+                            : "Skontaktuj się ze mną telefonicznie lub mailowo (dane kontaktowe są podane w stopce stony)"}
+                    </div>
+                </div>
+            </Modal>
         </div>
     )
 }

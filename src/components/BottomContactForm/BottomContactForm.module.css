@@ -1,5 +1,4 @@
-
-:root{
+:root {
     --form-input-width: 400px;
 }
 
@@ -23,7 +22,8 @@ form>div>div {
 
 }
 
-input, textarea{
+input,
+textarea {
     width: 400px;
 }
 
@@ -52,6 +52,20 @@ label {
     width: 50%
 }
 
+.modal_content {
+    color: var(--nav-color);
+    font-weight: 300;
+    justify-content: center;
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 40px;
+    font-size: 13px;
+}
+
+.modal_content_title {
+    font-size: 16px;
+    font-weight: 400;
+}
 
 @media screen and (max-width: 950px) {
     form {
@@ -68,8 +82,9 @@ label {
         padding-right: 30px;
         max-width: 500px;
     }
-    
-    input, textarea {
+
+    input,
+    textarea {
         align-items: center;
         width: 100%;
     }

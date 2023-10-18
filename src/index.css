@@ -102,8 +102,52 @@ a {
 }
 
 
+
+.ReactModal__Overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+
+}
+
+.ReactModal__Content {
+  position: absolute; 
+  width: 40%;
+  height: 60%;
+  left: 50%;
+  overflow: auto;
+  background-color: #fff;
+  transform: translate(70%, 15%);
+  border: none !important;
+  border-radius: 10px !important; 
+
+}
+
+
 @media screen and (max-width: 740px) {
   .banner-text {
     font-size: 20px;
+  }
+}
+
+
+@media screen and (max-width: 740px) { 
+  .ReactModal__Content {
+      width: 60%;
+      height: 80%;
+      transform: translate(25%, 0%);
+
+  }
+}
+
+@media screen and (max-width: 425px) { 
+  .ReactModal__Content {
+      width: 90%;
+      height: 80%;
+      transform: translate(-5%, 0%);
+
   }
 }

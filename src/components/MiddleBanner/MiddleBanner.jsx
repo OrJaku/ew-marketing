@@ -6,7 +6,7 @@ import middleBanner from '../../assets/middleBanner.png'
 import imagePeople from '../../assets/middleImage.svg'
 
 const MiddleBanner = ({ middleBannerRef }) => {
-    const [quizIsOpen, setQuizIsOpen] = useState(true)
+    const [quizIsOpen, setQuizIsOpen] = useState(false)
     return (
         <div className={styles.container}>
             <div
@@ -15,7 +15,7 @@ const MiddleBanner = ({ middleBannerRef }) => {
                 style={{ backgroundImage: `url(${middleBanner})` }}
                 className={styles.banner}>
                 <div
-                    className={`banner-text ${styles.htext}`}>
+                    className={`banner-text ${styles.htext} ${styles.text_container}`}>
                     <div>
                     // SPRAWDŹ, CZEGO POTRZEBUJE TWÓJ BIZNES
                     </div>
@@ -31,11 +31,10 @@ const MiddleBanner = ({ middleBannerRef }) => {
                         </button>
                     </div>
                 </div>
-
             </div>
-            {/* <img
+            <img
                 className={styles.peopleimg}
-                src={imagePeople} alt="img" /> */}
+                src={imagePeople} alt="img" />
             <div className={quizIsOpen? [styles.quiz_container ,styles.qc_active].join(' '): styles.quiz_container}>
                 <Quiz />
             </div>

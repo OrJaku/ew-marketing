@@ -16,6 +16,11 @@
     z-index: 1;
 }
 
+.text_container{
+    position: absolute;
+    z-index: 5;
+}
+
 .htext {
     padding-left: 60px;
     padding-top: 90px;
@@ -33,6 +38,7 @@
 .button {
     align-items: center;
     margin-top: 10px;
+    z-index: 10;
 }
 
 .quiz_container {
@@ -67,10 +73,4 @@
         padding-top: 3rem
     }
 
-}
-
-@media screen and (max-width: 400px) {
-    .peopleimg {
-        left: -30%;
-    }
 }

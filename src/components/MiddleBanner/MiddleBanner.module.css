@@ -13,12 +13,43 @@
     top: -100px;
     left: 70%;
     opacity: 0.45;
+    z-index: 1;
 }
 
 .htext {
     padding-left: 60px;
     padding-top: 90px;
 }
+
+.ltext {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.description {
+    padding-left: 20px;
+}
+
+.button {
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quiz_container {
+    overflow: hidden;
+    padding: 0px 20px;
+    margin-top: 20px;
+    height: 0px;
+    transition: height 1s ease-in-out; 
+}
+
+.qc_active {
+    height: 300px;
+
+    /* transition: margin-bottom 1.5s;  */
+
+}
+
 
 @media screen and (max-width: 1250px) {
     .peopleimg {
@@ -33,7 +64,7 @@
 
     .htext {
         margin-right: 70px;
-        padding-top: 5rem
+        padding-top: 3rem
     }
 
 }

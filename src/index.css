@@ -57,7 +57,7 @@ textarea::placeholder {
 }
 
 button {
-  padding: 7px 20px;
+  padding: 6px 20px;
   text-transform: uppercase;
   border: unset;
   border-radius: 3px;

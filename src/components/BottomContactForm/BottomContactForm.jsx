@@ -122,7 +122,7 @@ const BottomContactForm = ({ }) => {
                         alt="OK" />
                     <div>
                         {submitResponseState
-                            ? "Odezwię się na podane dane kontaktowe w najszybciej jak to będzie możliwe :)"
+                            ? "Odezwę się na podane dane kontaktowe w najszybciej jak to będzie możliwe :)"
                             : "Skontaktuj się ze mną telefonicznie lub mailowo (dane kontaktowe są podane w stopce stony)"}
                     </div>
                 </div>

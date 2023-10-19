@@ -64,15 +64,18 @@ const BottomContactForm = ({ }) => {
                     <div className={styles.text}>
                         <label htmlFor='name'>Imię*</label>
                         <input
+                            required
                             id='name'
                             type='text'
                             value={name}
+                            maxLength={40}
                             onChange={(e) => setName(e.target.value)}
                             placeholder='Gosia' />
                     </div>
                     <div className={styles.text}>
                         <label htmlFor='phone-number'>Telefon*</label>
                         <input
+                            required
                             id='phone-number'
                             type='tel'
                             value={phoneNumber}
@@ -87,6 +90,7 @@ const BottomContactForm = ({ }) => {
                             id='message'
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
+                            maxLength={750}
                             placeholder='Napisz kilka zdań o twojej firmie, stronie czy reklamach..' />
                     </div>
                     <button

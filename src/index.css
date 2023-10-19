@@ -135,15 +135,6 @@ a {
 }
 
 
-/* @media screen and (max-width: 740px) { 
-  .ReactModal__Content {
-      width: 80%;
-      height: 80%;
-      transform: translate(3%, 0%);
-
-  }
-} */
-
 @media screen and (max-width: 500px) { 
   .ReactModal__Content {
       width: 90%;

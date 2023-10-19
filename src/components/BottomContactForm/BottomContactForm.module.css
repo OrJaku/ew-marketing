@@ -53,18 +53,23 @@ label {
 }
 
 .modal_content {
+    position: absolute;
+    left: 0;
+    right: 0;
     color: var(--nav-color);
     font-weight: 300;
     justify-content: center;
     text-align: center;
-    padding-top: 55px;
-    padding-bottom: 40px;
     font-size: 13px;
+    top: 25%;
+    padding-left: 40px; 
+    padding-right: 40px;
 }
 
 .modal_content_title {
     font-size: 16px;
     font-weight: 400;
+
 }
 
 @media screen and (max-width: 950px) {

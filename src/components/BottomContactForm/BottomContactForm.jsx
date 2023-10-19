@@ -5,9 +5,22 @@ import Modal from 'react-modal';
 import { sendFormData } from '../../utils/services.js'
 import { AiOutlineClose } from 'react-icons/ai'
 
+const modalCustomStyle = {
+    content: {
+        position: 'absolute',
+        width: '40%',
+        height: '60%',
+        left: '50%',
+        overflow: 'auto',
+        transform: 'translate(70%, 15%)',
+        backgroundColor: 'rgb(253, 253, 253)',
+        border: ' 1px solid rgba(195, 195, 195, 0.55)',
+        borderRadius: '10px',
+        inset: 'unset'
+    }
+}
 
-
-const BottomContactForm = ({ }) => {
+const BottomContactForm = ({ isMobile }) => {
     // Forms
     const [name, setName] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
@@ -50,6 +63,15 @@ const BottomContactForm = ({ }) => {
             console.log("Error Catch: Incorrect server response", resp)
         }
         setSubmitModalOpen(true)
+    }
+
+    const handleModalCustomStyle = (isMobile, modalCustomStyle) => {
+        if (isMobile){
+            modalCustomStyle.content.width = '90%'
+            modalCustomStyle.content.height = '60%'
+            modalCustomStyle.content.transform = 'translate(5%, 10%)'
+        }
+        return modalCustomStyle
     }
 
     return (
@@ -101,11 +123,12 @@ const BottomContactForm = ({ }) => {
                 </form>
             </div>
             <Modal
+                style={handleModalCustomStyle(isMobile, modalCustomStyle)}
                 ariaHideApp={false}
                 isOpen={submitModalOpen}
                 onRequestClose={() => setSubmitModalOpen(false)}
             >
-                <div style={{float: 'right'}}>
+                <div style={{ float: 'right' }}>
                     {<AiOutlineClose
                         onClick={() => setSubmitModalOpen(false)}
                         size={25}

@@ -4,7 +4,7 @@ import BottomContactForm from '../BottomContactForm/BottomContactForm'
 import bottomBanner from '../../assets/bottomBanner.png'
 import bottomImage from '../../assets/bottomImage.svg'
 
-const BottomBanner = ({ bottomBannerRef }) => {
+const BottomBanner = ({ isMobile, bottomBannerRef }) => {
     return (
         <div>
 
@@ -18,7 +18,8 @@ const BottomBanner = ({ bottomBannerRef }) => {
                 <div
                     className={styles.headertext} >
                     <div>
-                        <BottomContactForm />
+                        <BottomContactForm
+                            isMobile={isMobile} />
                     </div>
                 </div>
             </div>

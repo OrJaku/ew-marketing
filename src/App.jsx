@@ -18,17 +18,17 @@ function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= baseDimensions.mobilPageWidthPx ? true : false)
 
   useEffect(() => {
-      function handleWindowResize() {
-          if (window.innerWidth <= baseDimensions.mobilPageWidthPx) {
-              setIsMobile(true)
-          } else {
-              setIsMobile(false)
-          }
+    function handleWindowResize() {
+      if (window.innerWidth <= baseDimensions.mobilPageWidthPx) {
+        setIsMobile(true)
+      } else {
+        setIsMobile(false)
       }
-      window.addEventListener('resize', handleWindowResize);
-      return () => {
-          window.removeEventListener('resize', handleWindowResize);
-      };
+    }
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
   }, []);
 
 
@@ -40,13 +40,14 @@ function App() {
         middleBannerRef={middleBannerRef}
         bottomBannerRef={bottomBannerRef} />
       <HeaderBanner />
-      <HeaderContent 
+      <HeaderContent
         isMobile={isMobile}
-        headerContentRef={headerContentRef}/>
+        headerContentRef={headerContentRef} />
       <MiddleBanner
         middleBannerRef={middleBannerRef} />
       <MiddleContent />
       <BottomBanner
+        isMobile={isMobile}
         bottomBannerRef={bottomBannerRef} />
       <Footer />
     </div>

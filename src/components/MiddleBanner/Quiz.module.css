@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     color: var(--nav-color);
+    position: relative;
 }
 
 .questions>div {
@@ -21,6 +22,21 @@
 
 .questions>div:hover {
     opacity: 0.9;
+}
+
+.modal_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: var(--nav-color);
+    font-weight: 300;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    top: 25%;
+    padding-left: 40px; 
+    padding-right: 40px;
+    color: black;
 }
 
 @media screen and (max-width: 460px) {

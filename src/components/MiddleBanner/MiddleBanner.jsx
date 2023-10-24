@@ -7,6 +7,9 @@ import imagePeople from '../../assets/middleImage.svg'
 
 const MiddleBanner = ({ middleBannerRef }) => {
     const [quizIsOpen, setQuizIsOpen] = useState(false)
+    const [quizModalOpen, setQuizModalOpen] = useState(false)
+    const [selectedIds, setSelectedIds] = useState([])
+
     return (
         <div className={styles.container}>
             <div
@@ -27,7 +30,7 @@ const MiddleBanner = ({ middleBannerRef }) => {
                             onClick={() => setQuizIsOpen(!quizIsOpen)}
                             type='button'
                             className={styles.button}
-                            >{quizIsOpen? "Zamknij": "Zaczynamy!"}
+                        >{quizIsOpen ? "Zamknij" : "Zaczynamy!"}
                         </button>
                     </div>
                 </div>
@@ -35,8 +38,21 @@ const MiddleBanner = ({ middleBannerRef }) => {
             <img
                 className={styles.peopleimg}
                 src={imagePeople} alt="img" />
-            <div className={quizIsOpen? [styles.quiz_container ,styles.qc_active].join(' '): styles.quiz_container}>
-                <Quiz />
+            <div className={quizIsOpen ? [styles.quiz_container, styles.qc_active].join(' ') : styles.quiz_container}>
+                <Quiz
+                    selectedIds={selectedIds}
+                    setSelectedIds={setSelectedIds}
+                    quizIsOpen={quizIsOpen}
+                    quizModalOpen={quizModalOpen} 
+                    setQuizModalOpen={setQuizModalOpen}/>
+                {quizIsOpen && selectedIds.length > 0
+                    ? <button
+                        onClick={() => setQuizModalOpen(!quizModalOpen)}
+                        className={styles.quiz_button}
+                        type='button'>
+                        {`Porada  (${selectedIds.length})`}
+                    </button>
+                    : ""}
             </div>
         </div>
     )

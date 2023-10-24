@@ -23,7 +23,7 @@
 
 .htext {
     padding-left: 60px;
-    padding-top: 90px;
+    padding-top: 75px;
 }
 
 .ltext {
@@ -46,7 +46,7 @@
     padding: 0px 20px;
     margin-top: 20px;
     height: 0px;
-    transition: height 1s ease-in-out;
+    transition: height 0.5s ease-in-out;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -59,6 +59,54 @@
 
 }
 
+.quiz_button {
+    position: absolute;
+    width: 50%;
+    height: fit-content;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    top: 103%;
+    bottom: 0;
+    left: 25%;
+    right: 50%;
+    background-color: rgba(151, 53, 207, 0.768);
+    animation: blinkingBtn 3s linear, opacityBtn 1s linear, leftSlideAnimation 1s linear;
+    animation-iteration-count: infinite, 1, 1;
+}
+
+
+@keyframes blinkingBtn {
+    0% {
+        background-color: rgba(151, 53, 207, 0.868);
+    }
+    50% {
+        background-color: rgba(151, 53, 207, 0.568);
+    }
+    100% {
+        background-color: rgba(151, 53, 207, 0.868);
+    }
+}
+
+@keyframes opacityBtn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;;
+    }
+}
+
+@keyframes leftSlideAnimation {
+    0% {
+        right: -20%;
+    }
+    100% {
+        right: 3%;
+    }
+}
 
 @media screen and (max-width: 1250px) {
     .peopleimg {
@@ -83,6 +131,13 @@
         overflow-y: scroll;
         width: auto;
 
+    }
+
+    .quiz_button {
+        width: 130px;
+        top: 73%;
+        right: 3%;
+        left: unset;
     }
 
 }

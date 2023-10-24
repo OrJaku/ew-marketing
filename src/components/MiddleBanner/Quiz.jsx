@@ -8,11 +8,11 @@ import questions from '../../utils/quiz_questions.json'
 const modalCustomStyle = {
     content: {
         position: 'absolute',
-        width: '90%',
+        width: '50%',
         height: '80%',
         left: '50%',
         overflow: 'auto',
-        transform: 'translate(5%, 5%)',
+        transform: 'translate(45%, 5%)',
         backgroundColor: 'rgb(253, 253, 253)',
         border: ' 1px solid rgba(195, 195, 195, 0.55)',
         borderRadius: '10px',
@@ -21,6 +21,7 @@ const modalCustomStyle = {
 }
 
 const Quiz = ({
+    isMobile,
     selectedIds,
     setSelectedIds,
     quizIsOpen,
@@ -40,6 +41,14 @@ const Quiz = ({
         } else {
             setSelectedIds(oldIds => [...oldIds, id])
         }
+    }
+
+    const handleModalCustomStyle = (isMobile, modalCustomStyle) => {
+        if (isMobile){
+            modalCustomStyle.content.width = '90%'
+            modalCustomStyle.content.transform = 'translate(5%, 5%)'
+        }
+        return modalCustomStyle
     }
 
     const renderHTML = (rawHTML) =>
@@ -65,7 +74,7 @@ const Quiz = ({
                 ))}
             </div>
             <Modal
-                style={modalCustomStyle}
+                style={handleModalCustomStyle(isMobile, modalCustomStyle)}
                 ariaHideApp={false}
                 isOpen={quizModalOpen}
                 onRequestClose={() => setQuizModalOpen(false)}

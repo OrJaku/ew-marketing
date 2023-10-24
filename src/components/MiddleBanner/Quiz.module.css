@@ -33,7 +33,7 @@
     justify-content: center;
     text-align: left;
     font-size: 13px;
-    padding: 40px 50px;
+    padding: 40px 70px;
     color: black;
 }
 
@@ -50,5 +50,9 @@
     .questions>div {
         width: auto;
         font-size: 12px;
+    }
+
+    .modal_content {
+        padding: 20px 30px;
     }
 }

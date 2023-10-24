@@ -5,7 +5,7 @@ import Quiz from './Quiz'
 import middleBanner from '../../assets/middleBanner.png'
 import imagePeople from '../../assets/middleImage.svg'
 
-const MiddleBanner = ({ middleBannerRef }) => {
+const MiddleBanner = ({ isMobile, middleBannerRef }) => {
     const [quizIsOpen, setQuizIsOpen] = useState(false)
     const [quizModalOpen, setQuizModalOpen] = useState(false)
     const [selectedIds, setSelectedIds] = useState([])
@@ -40,6 +40,7 @@ const MiddleBanner = ({ middleBannerRef }) => {
                 src={imagePeople} alt="img" />
             <div className={quizIsOpen ? [styles.quiz_container, styles.qc_active].join(' ') : styles.quiz_container}>
                 <Quiz
+                    isMobile={isMobile}
                     selectedIds={selectedIds}
                     setSelectedIds={setSelectedIds}
                     quizIsOpen={quizIsOpen}

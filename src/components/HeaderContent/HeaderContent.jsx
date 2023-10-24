@@ -11,18 +11,18 @@ const HeaderContent = ({ headerContentRef, isMobile }) => {
         },
         content: {
             image: "content",
-            title: "CONTENT MARKETING",
+            title: "MARKETING",
             subtitle: "Tworzenie grafik, pisanie postów, opracowanie strategii komunikacji"
-        },
-        strony: {
-            image: "strony",
-            title: "STRONY WWW",
-            subtitle: "Projekt UX/UI, stworzenie i utrzymanie strony"
         },
         kampanie: {
             image: "kampanie",
             title: "KAMPANIE  GOOGLE",
             subtitle: "Tworzenie, optymalizacja, raportowanie"
+        },
+        strony: {
+            image: "strony",
+            title: "STRONY WWW",
+            subtitle: "Projekt UX/UI, stworzenie i utrzymanie strony"
         },
     }
 

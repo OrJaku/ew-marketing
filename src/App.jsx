@@ -44,6 +44,7 @@ function App() {
         isMobile={isMobile}
         headerContentRef={headerContentRef} />
       <MiddleBanner
+        isMobile={isMobile}
         middleBannerRef={middleBannerRef} />
       <MiddleContent />
       <BottomBanner

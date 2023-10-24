@@ -31,12 +31,19 @@
     color: var(--nav-color);
     font-weight: 300;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     font-size: 13px;
-    top: 25%;
-    padding-left: 40px; 
-    padding-right: 40px;
+    padding: 40px 50px;
     color: black;
+}
+
+.modal_question {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.modal_answers {
+    margin-bottom: 40px;
 }
 
 @media screen and (max-width: 460px) {

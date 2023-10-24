@@ -42,6 +42,13 @@ const Quiz = ({
         }
     }
 
+    const renderHTML = (rawHTML) =>
+        React.createElement(
+            "div",
+            {
+                dangerouslySetInnerHTML: { __html: rawHTML }
+            });
+
     return (
         <div>
             <div className={styles.questions}>
@@ -72,7 +79,14 @@ const Quiz = ({
                 </div>
                 <div className={styles.modal_content}>
                     {selectedIds.map((id_) => (
-                        <div key={id_}>{questions[id_].answer}</div>
+                        <div key={id_}>
+                            <div className={styles.modal_question}>
+                                {questions[id_].question}
+                            </div>
+                            <div className={styles.modal_answers}>
+                                {renderHTML(questions[id_].answer)}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </Modal>

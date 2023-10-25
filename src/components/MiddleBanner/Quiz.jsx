@@ -51,10 +51,6 @@ const Quiz = ({
         return modalCustomStyle
     }
 
-    const handleCloseModal = () => {
-        console.log("CLICK")
-    }
-
     const renderHTML = (rawHTML) =>
         React.createElement(
             "div",

@@ -66,7 +66,7 @@ const BottomContactForm = ({ isMobile }) => {
     }
 
     const handleModalCustomStyle = (isMobile, modalCustomStyle) => {
-        if (isMobile){
+        if (isMobile) {
             modalCustomStyle.content.width = '90%'
             modalCustomStyle.content.height = '60%'
             modalCustomStyle.content.transform = 'translate(5%, 10%)'
@@ -128,10 +128,11 @@ const BottomContactForm = ({ isMobile }) => {
                 isOpen={submitModalOpen}
                 onRequestClose={() => setSubmitModalOpen(false)}
             >
-                <div style={{ float: 'right' }}>
+                <div style={{display: 'flex', justifyContent: 'flex-end'}}>
                     {<AiOutlineClose
                         onClick={() => setSubmitModalOpen(false)}
                         size={25}
+                        cursor={'pointer'}
                         color={'black'} />}
                 </div>
                 <div className={styles.modal_content}>

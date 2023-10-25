@@ -51,6 +51,10 @@ const Quiz = ({
         return modalCustomStyle
     }
 
+    const handleCloseModal = () => {
+        console.log("CLICK")
+    }
+
     const renderHTML = (rawHTML) =>
         React.createElement(
             "div",
@@ -74,18 +78,21 @@ const Quiz = ({
                 ))}
             </div>
             <Modal
+                closeTimeoutMS={500}
                 style={handleModalCustomStyle(isMobile, modalCustomStyle)}
                 ariaHideApp={false}
                 isOpen={quizModalOpen}
                 onRequestClose={() => setQuizModalOpen(false)}
             >
-                <div style={{ float: 'right' }}>
+                <div style={{display: 'flex', justifyContent: 'flex-end'}}>
                     {<AiOutlineClose
                         onClick={() => setQuizModalOpen(false)}
                         size={25}
+                        cursor={'pointer'}
                         color={'black'} />}
 
                 </div>
+                
                 <div className={styles.modal_content}>
                     {selectedIds.map((id_) => (
                         <div key={id_}>

@@ -6,7 +6,7 @@
 }
 
 .questions>div {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     border-radius: 2px;
     width: auto;
@@ -49,7 +49,7 @@
 @media screen and (max-width: 460px) {
     .questions>div {
         width: auto;
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .modal_content {

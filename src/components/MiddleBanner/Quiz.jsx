@@ -66,7 +66,7 @@ const Quiz = ({
                         key={id_}
                         id={id_}
                         style={{
-                            backgroundColor: `rgba(21, 173, 244, ${selectedIds.includes(id_) ? 0.88 : 0.55})`
+                            backgroundColor: `rgba(70,193,233, ${selectedIds.includes(id_) ? 0.7: 1})`
                         }}
                         onClick={(e) => handleAddToSelected(e.target.id)}>
                         {val.question}

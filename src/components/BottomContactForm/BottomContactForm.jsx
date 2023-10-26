@@ -113,7 +113,7 @@ const BottomContactForm = ({ isMobile }) => {
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             maxLength={750}
-                            placeholder='Napisz kilka zdań o twojej firmie, stronie czy reklamach..' />
+                            placeholder='Napisz w jakim problemie z marketingiem mogę Ci pomóc ;)' />
                     </div>
                     <button
                         type='submit'

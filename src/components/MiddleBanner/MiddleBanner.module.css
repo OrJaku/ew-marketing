@@ -134,10 +134,7 @@
     }
 
     .quiz_button {
-        width: 130px;
-        top: 73%;
-        right: 3%;
-        left: unset;
+        margin-left: 1px;
     }
 
 }

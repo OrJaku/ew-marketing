@@ -1,6 +1,16 @@
-export async function sendFormData(url, data = {}, respFunction = null) {
+import urls from '../utils/apiConfig.json'
+
+const handleUrlAddress = (apiEndpoint) => {
+    if (process.env.NODE_ENV === 'development') {
+        return urls.telegramApiUrl + apiEndpoint
+    } else {
+        return '/api' + apiEndpoint
+    }
+}
+
+export async function sendFormData(apiEndpoint, data = {}, respFunction = null) {
     try {
-        const response = await fetch(url, {
+        const response = await fetch(handleUrlAddress(apiEndpoint), {
             method: "POST",
             mode: "cors",
             cache: "no-cache",

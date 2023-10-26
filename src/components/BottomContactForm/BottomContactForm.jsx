@@ -49,7 +49,7 @@ const BottomContactForm = ({ isMobile }) => {
             phone_number: Number(phoneNumber.split("-").join('')),
             message: message
         }
-        const resp = await sendFormData("http://130.61.148.113:8898/submit", formBody, setSubmitResponseState)
+        const resp = await sendFormData("https://130.61.148.113:8898/submit", formBody, setSubmitResponseState)
         try {
             if ("message" in resp) {
                 setSubmitResponseState(true)

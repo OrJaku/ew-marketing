@@ -44,7 +44,8 @@ const Navbar = ({
                             mobileMenuOpen={mobileMenuOpen}
                             middleBannerRef={middleBannerRef}
                             bottomBannerRef={bottomBannerRef}
-                            headerContentRef={headerContentRef} />
+                            headerContentRef={headerContentRef}
+                            bottomContentRef={bottomContentRef}  />
                     </nav>
                 </>
                 :

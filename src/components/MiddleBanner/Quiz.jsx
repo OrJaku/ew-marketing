@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Modal from 'react-modal';
 import styles from './Quiz.module.css'
 import { AiOutlineClose } from 'react-icons/ai'
@@ -44,7 +44,7 @@ const Quiz = ({
     }
 
     const handleModalCustomStyle = (isMobile, modalCustomStyle) => {
-        if (isMobile){
+        if (isMobile) {
             modalCustomStyle.content.width = '90%'
             modalCustomStyle.content.transform = 'translate(5%, 5%)'
         }
@@ -57,7 +57,6 @@ const Quiz = ({
             {
                 dangerouslySetInnerHTML: { __html: rawHTML }
             });
-
     return (
         <div>
             <div className={styles.questions}>
@@ -66,7 +65,7 @@ const Quiz = ({
                         key={id_}
                         id={id_}
                         style={{
-                            backgroundColor: `rgba(70,193,233, ${selectedIds.includes(id_) ? 0.7: 1})`
+                            backgroundColor: `rgba(70,193,233, ${selectedIds.includes(id_) ? 0.7 : 1})`
                         }}
                         onClick={(e) => handleAddToSelected(e.target.id)}>
                         {val.question}
@@ -80,7 +79,7 @@ const Quiz = ({
                 isOpen={quizModalOpen}
                 onRequestClose={() => setQuizModalOpen(false)}
             >
-                <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                     {<AiOutlineClose
                         onClick={() => setQuizModalOpen(false)}
                         size={25}
@@ -88,8 +87,8 @@ const Quiz = ({
                         color={'black'} />}
 
                 </div>
-                
-                <div className={styles.modal_content}>
+                <div
+                    className={styles.modal_content}>
                     {selectedIds.map((id_) => (
                         <div key={id_}>
                             <div className={styles.modal_question}>

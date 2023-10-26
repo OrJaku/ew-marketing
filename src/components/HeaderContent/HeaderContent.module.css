@@ -35,7 +35,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         justify-content: unset;
-        width: 400px;
+        width: 480px;
     }
 
     .htext {
@@ -44,7 +44,7 @@
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
     .cards {
         width: 360px;
     }
@@ -52,6 +52,6 @@
 
 @media screen and (max-width: 360px) {
     .cards {
-        width: 200px;
+        width: 340px;
     }
 }

@@ -8,7 +8,7 @@ export async function sendFormData(url, data = {}, respFunction = null) {
             headers: {
                 "Content-Type": "application/json",
             },
-            redirect: "follow",
+            redirect: 'follow',
             referrerPolicy: "no-referrer",
             body: JSON.stringify(data),
         });

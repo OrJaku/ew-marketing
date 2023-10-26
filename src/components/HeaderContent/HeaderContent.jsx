@@ -32,7 +32,7 @@ const HeaderContent = ({ headerContentRef, isMobile }) => {
             className={styles.content}>
             <div
                 className={`banner-text ${styles.htext}`}>
-                // Co robię
+                <span className={'double-slash'}>//</span> Co robię
             </div>
             <div className={styles.cards}>
                 {Object.values(cardList).map((item) => (

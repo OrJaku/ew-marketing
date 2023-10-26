@@ -20,7 +20,7 @@ const MiddleBanner = ({ isMobile, middleBannerRef }) => {
                 <div
                     className={`banner-text ${styles.htext} ${styles.text_container}`}>
                     <div>
-                    // SPRAWDŹ, CZEGO POTRZEBUJE TWÓJ BIZNES
+                    <span className={'double-slash'}>//</span> SPRAWDŹ, CZEGO POTRZEBUJE TWÓJ BIZNES
                     </div>
                     <div className={styles.description}>
                         <div className={styles.ltext}>

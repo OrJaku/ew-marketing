@@ -5,7 +5,13 @@ import Navbuttons from './Navbuttons'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import Logo from '../../assets/logo.svg'
 
-const Navbar = ({ isMobile, middleBannerRef, bottomBannerRef, headerContentRef }) => {
+const Navbar = ({
+    isMobile,
+    middleBannerRef,
+    bottomBannerRef,
+    headerContentRef,
+    bottomContentRef
+}) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -49,7 +55,8 @@ const Navbar = ({ isMobile, middleBannerRef, bottomBannerRef, headerContentRef }
                             mobileMenuOpen={mobileMenuOpen}
                             middleBannerRef={middleBannerRef}
                             bottomBannerRef={bottomBannerRef}
-                            headerContentRef={headerContentRef} />
+                            headerContentRef={headerContentRef}
+                            bottomContentRef={bottomContentRef} />
                     </nav>
                 </>
             }

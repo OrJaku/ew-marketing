@@ -1,7 +1,13 @@
 import React from 'react'
 import styles from './Navbar.module.css'
 
-const Navbuttons = ({ mobileMenuOpen, middleBannerRef, bottomBannerRef, headerContentRef }) => {
+const Navbuttons = ({
+    mobileMenuOpen, 
+    middleBannerRef, 
+    bottomBannerRef,
+    headerContentRef, 
+    bottomContentRef 
+}) => {
     return (
         <ul className={mobileMenuOpen ? [styles.menu, styles.show_menu].join(' ') : [styles.menu, styles.hide_menu].join(' ')}>
             <li>
@@ -32,7 +38,13 @@ const Navbuttons = ({ mobileMenuOpen, middleBannerRef, bottomBannerRef, headerCo
                 </a>
             </li>
             <li>
-                <a href='/'>O mnie</a>
+            <a
+                    onClick={() => bottomContentRef.current.scrollIntoView({
+                        behavior: "smooth",
+                        inline: "start"
+                    })}>
+                    O mnie
+                </a>
             </li>
         </ul>
     )

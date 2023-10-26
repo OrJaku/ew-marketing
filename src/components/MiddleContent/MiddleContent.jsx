@@ -8,7 +8,7 @@ const MiddleBanner = () => {
             className={styles.content}>
             <div
                 className={`banner-text ${styles.htext}`}>
-                // Znajdźmy Twoich klientów!
+                <span className={'double-slash'}>//</span> Znajdźmy Twoich klientów!
             </div>
         </div>
     )

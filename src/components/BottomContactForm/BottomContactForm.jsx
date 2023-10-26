@@ -80,7 +80,7 @@ const BottomContactForm = ({ isMobile }) => {
                 className={styles.container}>
                 <div
                     className={`banner-text ${styles.htext}`}>
-                    // Porozmawiajmy!
+                    <span className={'double-slash'}>//</span> Porozmawiajmy!
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.text}>

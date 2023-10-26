@@ -8,13 +8,19 @@
 .content {
     max-width: var(--page-max-width);
     display: flex;
-    font-size: 12px;
+    font-size: 13px;
+    justify-content: space-between;
+
 }
 
-.content > div{
+.content>div {
+    position: relative;
+
     flex: 1 0 auto;
-    margin-top: 8px;
+    margin-top: 18px;
     color: var(--white-font-color);
+    padding-left: 30px;
+
 }
 
 .contact {
@@ -25,4 +31,15 @@
 .htext {
     padding-top: 60px;
     text-align: center;
+}
+
+@media screen and (max-width: 420px) {
+    .footer {
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
 }

@@ -12,7 +12,7 @@ const HeaderContent = ({ headerContentRef, isMobile }) => {
         content: {
             image: "content",
             title: "MARKETING",
-            subtitle: "Tworzenie grafik, pisanie postów, opracowanie strategii komunikacji"
+            subtitle: "Analiza konkurencji, opracowanie strategii komunikacji, tworzenie treści (posty, artykuły, grafiki)"
         },
         kampanie: {
             image: "kampanie",

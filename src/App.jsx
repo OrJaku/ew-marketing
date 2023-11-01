@@ -8,6 +8,7 @@ import BottomContent from "./components/BottomContent /BottomContent"
 import HeaderContent from "./components/HeaderContent/HeaderContent"
 import MiddleContent from "./components/MiddleContent/MiddleContent"
 import Footer from "./components/Footer/Footer"
+import ModalCookies from "./components/ModalCookies/ModalCookies"
 import { baseDimensions } from './utils/settings.js'
 
 
@@ -18,6 +19,7 @@ function App() {
   const bottomContentRef = useRef(null)
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= baseDimensions.mobilPageWidthPx ? true : false)
+  const [modalCookiesIsOpen, setModalCookiesIsOpen] = useState(true)
 
   useEffect(() => {
     function handleWindowResize() {
@@ -40,8 +42,8 @@ function App() {
         isMobile={isMobile}
         headerContentRef={headerContentRef}
         middleBannerRef={middleBannerRef}
-        bottomBannerRef={bottomBannerRef} 
-        bottomContentRef={bottomContentRef}/>
+        bottomBannerRef={bottomBannerRef}
+        bottomContentRef={bottomContentRef} />
       <HeaderBanner />
       <HeaderContent
         isMobile={isMobile}
@@ -53,10 +55,15 @@ function App() {
       <BottomBanner
         isMobile={isMobile}
         bottomBannerRef={bottomBannerRef} />
-      <BottomContent 
+      <BottomContent
         isMobile={isMobile}
-        bottomContentRef={bottomContentRef}/>
-      <Footer />
+        bottomContentRef={bottomContentRef} />
+      <Footer
+        isMobile={isMobile} />
+      <ModalCookies
+        setModalCookiesIsOpen={setModalCookiesIsOpen}
+        modalCookiesIsOpen={modalCookiesIsOpen}
+        isMobile={isMobile} />
     </div>
   )
 }

@@ -1,0 +1,23 @@
+.modal_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: var(--nav-color);
+    font-weight: 300;
+    justify-content: center;
+    text-align: center;
+    top: 15%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.modal_content > div{
+    margin-bottom: 8px;
+}
+
+.button {
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

@@ -33,6 +33,33 @@
     text-align: center;
 }
 
+.modal_content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: var(--nav-color);
+    font-weight: 300;
+    justify-content: center;
+    text-align: left;
+    font-size: 13px;
+    top: 5%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.rodo_btn {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.rodo_btn:hover {
+    opacity: 0.65;
+}
+
+.rodo_btn:active {
+    transform: translateY(1px);
+}
+
 @media screen and (max-width: 420px) {
     .footer {
         height: fit-content;
